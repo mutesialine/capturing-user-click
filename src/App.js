@@ -1,6 +1,6 @@
 
 const App = () => {
-  function Message(e){
+  function message(e){
     e.preventDefault();
     alert("clicked!");
   }
