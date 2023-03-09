@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const App = () => {
  const[count, setCount]= useState(0)
- function startCount(){
+ const startCount = () =>{
  setCount((prevNumber) => prevNumber + 1)
  }
   return (
