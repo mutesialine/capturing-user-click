@@ -1,13 +1,11 @@
 
-const Card = () => {
+const Card = ({setup, punchline}) => {
   return (
-    <div className="w-[500px]">
-      <div className="flex flex-col">
-        <h2 className="text-2xl">{title}</h2>
-        <p>{subtitle}</p>
-      </div>
+    <div className=" flex flex-col gap-y-6 bg-white m-8 p-8 shadow-md rounded-md">
+        <h2 className="text-2xl font-bold">{setup}</h2>
+        <p>{punchline}</p>
     </div>
   );
-}
+};
 
 export default Card
