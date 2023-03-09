@@ -1,12 +1,13 @@
 
 const App = () => {
-  function message(e){
-    e.preventDefault();
-    alert("clicked!");
-  }
+ const animals= ["dog", "cat", "chicken", "cow", "sheep", "horse"];
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-blue-100">
-        <button className="text-xl" onClick={message}>click me</button>
+    <div className="w-full flex justify-center items-center h-screen bg-blue-100">
+      <ul className="space-y-2 marker:text-black list-disc">
+        {animals.map((animal, index) => (
+          <li key={index}>{animal}</li>
+        ))}
+      </ul>
     </div>
   );
 }
