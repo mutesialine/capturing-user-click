@@ -5,11 +5,11 @@ const App = () => {
     firstname:"",
     secondname: ""
   })
-  function handleChange(event){
+  const handleChange = (event) =>{
     setName(prevName => ({...prevName,[event.target.name]:event.target.value}))
   }
-  function message(e){
-    e.preventDefault();
+  const message = (event) => {
+    event.preventDefault();
     alert(`Hello ${name.firstname} ${name.secondname}`);
   }
   return (
