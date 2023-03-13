@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import Card from "./components/ui/Card";
 const App = () => {
-  const [data, cardData] = useState([]);
-  function getData(){
+  const [data, setCardData] = useState([]);
+  function getCardData(){
    fetch("https://random-data-api.com/api/users/random_user?size=10")
    .then((res) => res.json())
    .then((data) => {
-     cardData(data);
+     setCardData(data);
    });
   }
   useEffect(() => {
-   getData()
+   getCardData()
   }, []);
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center bg-blue-100 py-32">
       <button
         className="px-4 py-2 rounded-lg bg-red-600 text-white text-bold"
-        onClick={getData}
+        onClick={getCardData}
       >
         Fetch Random
       </button>
